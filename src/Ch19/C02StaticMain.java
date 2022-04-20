@@ -1,0 +1,54 @@
+package Ch19;
+
+
+class Rectangle
+{
+	//기준좌표 설정
+	static int x;
+	static int y;
+	int width;
+	int height;
+	//생성자
+	Rectangle(int width,int height){
+		this.width=width;
+		this.height=height;
+	}
+    //끝점확인 가능   넓이재는것할때 확인용  사각형완성하기
+	void ShowEndPoint() {
+		System.out.printf("(%d,%d)\n",(x+width),(y+height));
+	}
+    //시작점,너비,높이,넓이끝점확인
+	void ShowInfo() {
+		int endx=x+width;
+		int endy=y+height;
+		
+		System.out.printf("시작-끝점 :(%d,%d) -(%d,%d)\n",x,y,endx,endy);
+		System.out.println("너비,높이 : "+width +","+height);
+		System.out.println("넓이 : "+(width*height));
+	}
+
+}
+
+
+
+
+public class C02StaticMain {
+
+	public static void main(String[] args) {
+		Rectangle.x=10;
+		Rectangle.y=20;
+		
+		Rectangle rec1 = new Rectangle(10,10); //사각형 객체 만듬
+		Rectangle rec2 = new Rectangle(5,7);
+		Rectangle rec3 = new Rectangle(6,5);
+		
+		
+		rec1.ShowInfo();
+		rec2.ShowInfo();
+		rec3.ShowInfo();
+		
+		
+
+	}
+
+}
